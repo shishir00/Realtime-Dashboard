@@ -30,8 +30,8 @@ Before running this project, make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https:https://github.com/shishir00/Realtime-Dashboard
-cd [Realtime-Dashboard]
+git clone https://github.com/shishir00/Realtime-Dashboard
+cd Realtime-Dashboard/Dashboard
 ```
 
 ### 2. Install Dependencies

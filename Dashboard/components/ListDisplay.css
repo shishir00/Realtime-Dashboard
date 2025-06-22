@@ -1,0 +1,253 @@
+.list {
+  overflow-x: auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.list:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.list table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border-radius: 20px;
+  overflow: hidden;
+  min-width: 700px;
+}
+
+.list th,
+.list td {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.list th {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #334155;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.list tbody tr {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.list tbody tr:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.03) 0%, rgba(99, 102, 241, 0.03) 100%);
+  transform: scale(1.01);
+}
+
+.list tbody tr:hover td {
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.crypto-pair {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.crypto-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.crypto-icon:hover {
+  transform: scale(1.1);
+}
+
+.crypto-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-symbol {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.crypto-fullname {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.price-cell {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1e293b;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.change-cell {
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.change-positive {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #15803d;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.change-negative {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.trade-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.trade-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  transition: left 0.5s ease;
+}
+
+.trade-btn:hover::before {
+  left: 0;
+}
+
+.trade-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.trade-btn:active {
+  transform: translateY(0);
+}
+
+.empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64748b;
+  font-style: italic;
+  font-size: 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-radius: 16px;
+  margin: 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.loading-skeleton {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.table-header-icon {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .list th,
+  .list td {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+  
+  .crypto-pair {
+    gap: 8px;
+  }
+  
+  .crypto-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .crypto-symbol {
+    font-size: 14px;
+  }
+  
+  .crypto-fullname {
+    display: none;
+  }
+  
+  .trade-btn {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+  
+  .change-cell {
+    min-width: 60px;
+    font-size: 12px;
+  }
+  
+  .price-cell {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list table {
+    min-width: 500px;
+  }
+  
+  .list th:nth-child(4),
+  .list td:nth-child(4) {
+    display: none;
+  }
+}

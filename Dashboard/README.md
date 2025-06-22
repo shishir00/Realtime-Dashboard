@@ -130,7 +130,7 @@ npm run dev
 
 
 
-The application will be available at [http://localhost:3000](http://localhost:3000)
+The application will be available at [http://localhost:3001/dashboard](http://localhost:3001/dashboard)
 
 ### Production Build
 
@@ -153,24 +153,28 @@ To test the real-time synchronization:
 ##  Project Structure
 
 ```
-dashboard/
+DASHBOARD/
+├── .next/
 ├── app/
 │   ├── dashboard/
 │   │   ├── dashboard.css
 │   │   └── page.tsx
-│   ├── components/
-│   │   ├── ListDisplay.css
-│   │   ├── ListDisplay.tsx
-│   │   ├── Navbar.css
-│   │   └── navbar.tsx
-│   ├── lib/
-│   │   ├── dataHooks.ts
-│   │   ├── firebase.ts
-│   │   └── useMarketOverviewFromHotList.ts
+│   ├── favicon.ico
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
+├── components/
+│   ├── ListDisplay.css
+│   ├── ListDisplay.tsx
+│   ├── Navbar.css
+│   └── navbar.tsx
+├── lib/
+│   ├── dataHooks.ts
+│   ├── firebase.ts
+│   └── useMarketOverviewFromHotList.ts
+├── node_modules/
 ├── public/
+├── types/
 ├── .env.local
 ├── .gitignore
 ├── eslint.config.mjs
